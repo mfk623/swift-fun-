@@ -9,10 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var buttonCount = 0
+    
+    @IBOutlet weak var mylable: UILabel!
+  
+    
+    @IBAction func buttontapped(_ sender: Any) {
+   
+        buttonCount = buttonCount + 1
+        
+        print(buttonCount)
+        
+        if buttonCount >= 5 {
+        
+            view.backgroundColor = UIColor.red
+        
+              mylable.text = " ouch that hurt"
+        }
+    
+        
+        
+        
+        
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+   
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +48,5 @@ class ViewController: UIViewController {
     }
 
 
-}
 
+}
